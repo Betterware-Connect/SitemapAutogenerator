@@ -206,7 +206,7 @@ function writeToFile() {
 }
 
 function readOutputPath() {
-  let outputPath = 'dist/';
+  let outputPath = 'public/';
   try {
     const emberCliFile = fs.readFileSync(emberCliPath, 'utf-8');
     const emberCliJson = JSON.parse(emberCliFile);
@@ -217,7 +217,7 @@ function readOutputPath() {
       outputPath = emberCliJson['outputPath'];
     }
   } catch {
-    outputPath = 'dist/';
+    outputPath = 'public/';
   }
 
   return outputPath;
